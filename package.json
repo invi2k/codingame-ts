@@ -17,7 +17,7 @@
   "author": "Torben Krupski",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jbnimble/codingame-typescript.git"
+    "url": "https://github.com/invi2k/codingame-ts"
   },
   "dependencies": {},
   "devDependencies": {
