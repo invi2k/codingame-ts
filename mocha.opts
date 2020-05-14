@@ -1,4 +1,0 @@
---compilers ts:ts-node/register,tsx:ts-node/register
---require ./mocha-require.js
---watch
-./src/test/**/*.test.ts

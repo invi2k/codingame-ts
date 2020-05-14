@@ -1,28 +1,28 @@
-import {Strings} from '../lib/strings'
+import {Strings} from '../lib/strings';
 
 // the program executor
-export class CodingameApp {
+export class CodinGameApp {
   public run() {
-    let MESSAGE = readline();
+    const MESSAGE = readline();
     let base2s = '';
-    for (var i = 0; i < MESSAGE.length; i++) {
-        var char = MESSAGE[i];
-        // get ascii code, then convert to base2
-        var base2 = char.charCodeAt(0).toString(2);
-        // pad front if less than 7 bits
-        base2 = base2.length < 7 ? '0'.repeat(7-base2.length) + base2 : base2;
-        printErr('loop ' + char + ' ' + base2);
-        base2s += base2;
+    for (let i = 0; i < MESSAGE.length; i++) {
+      const char = MESSAGE[i];
+      // get ascii code, then convert to base2
+      let base2 = char.charCodeAt(0).toString(2);
+      // pad front if less than 7 bits
+      base2 = base2.length < 7 ? '0'.repeat(7 - base2.length) + base2 : base2;
+      console.error('loop ' + char + ' ' + base2);
+      base2s += base2;
     }
     // group by same characters
-    var codes = Strings.group(base2s);
-    printErr('codes ' + codes)
+    const codes = Strings.group(base2s);
+    console.error('codes ' + codes);
     // encode with chuck norris algorithm
-    print(Strings.chuckNorrisEncode(codes));
+    console.log(Strings.chuckNorrisEncode(codes));
   }
 }
 
 // START PROGRAM
-if(typeof isRunAtCodingame === 'boolean') {
-  new CodingameApp().run() // start the program if the code is run at codingame
+if (typeof isRunAtCodinGame === 'boolean') {
+  new CodinGameApp().run(); // start the program if the code is run at codingame
 }

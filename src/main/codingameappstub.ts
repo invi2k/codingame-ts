@@ -5,7 +5,7 @@
 // put any imports here
 
 // the program executor
-export class CodingameApp {
+export class CodinGameApp {
   public run() {
     // read pre-loop inputs
     // TODO read pre-loop inputs
@@ -19,6 +19,6 @@ export class CodingameApp {
 }
 
 // START PROGRAM
-if(typeof isRunAtCodingame === 'boolean') {
-  new CodingameApp().run() // start the program if the code is run at codingame
+if (typeof isRunAtCodinGame === 'boolean') {
+  new CodinGameApp().run(); // start the program if the code is run at codingame
 }

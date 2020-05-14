@@ -1,28 +1,36 @@
 {
   "name": "codingame-typescript",
-  "description": "Solve codingame games with TypeScript",
+  "description": "Solve CodingGame games with TypeScript",
   "version": "1.0.0",
   "scripts": {
-    "dev": "webpack --mode development",
-    "build": "webpack --mode production",
-    "test": "TS_NODE_DISABLE_WARNINGS=true mocha --opts mocha.opts"
+    "build": "webpack --mode development",
+    "test": "ts-node node_modules/jasmine/bin/jasmine --config=jasmine.json",
+    "coverage": "nyc -r text -e .ts -x \"src/test/*.test.ts\" npm run test",
+    "check": "gts check",
+    "clean": "gts clean",
+    "compile": "tsc",
+    "fix": "gts fix",
+    "prepare": "npm.cmd run compile",
+    "pretest": "npm.cmd run compile",
+    "posttest": "npm.cmd run check"
   },
   "author": "jbnimble",
   "license": "SEE LICENSE IN LICENSE",
-  "repository" :{
-    "type" : "git",
-    "url" : "https://github.com/jbnimble/codingame-typescript.git"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jbnimble/codingame-typescript.git"
   },
   "dependencies": {},
   "devDependencies": {
-    "@types/chai": "^4.1.2",
-    "@types/mocha": "^2.2.48",
+    "@types/jasmine": "^3.5.10",
     "awesome-typescript-loader": "^4.0.1",
-    "chai": "^4.1.2",
-    "mocha": "^5.0.4",
-    "ts-node": "^5.0.1",
-    "typescript": "^2.7.2",
-    "webpack": "^4.1.1",
-    "webpack-cli": "^2.0.12"
+    "jasmine": "^3.5.0",
+    "nyc": "^15.0.1",
+    "ts-node": "^8.10.1",
+    "typescript": "^3.6.3",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.3.11",
+    "gts": "^2.0.2",
+    "@types/node": "^13.11.1"
   }
 }
