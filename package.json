@@ -1,6 +1,6 @@
 {
-  "name": "codingame-typescript",
-  "description": "Solve CodingGame games with TypeScript",
+  "name": "codingame-ts",
+  "description": "CodinGame Typescript Root Project",
   "version": "1.0.0",
   "scripts": {
     "build": "webpack --mode development",
@@ -14,8 +14,7 @@
     "pretest": "npm.cmd run compile",
     "posttest": "npm.cmd run check"
   },
-  "author": "jbnimble",
-  "license": "SEE LICENSE IN LICENSE",
+  "author": "Torben Krupski",
   "repository": {
     "type": "git",
     "url": "https://github.com/jbnimble/codingame-typescript.git"

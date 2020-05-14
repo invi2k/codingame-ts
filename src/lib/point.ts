@@ -64,7 +64,7 @@ export class Point {
 }
 
 export class KeyPoint {
-  constructor(public key: any, public point: Point) {}
+  constructor(public key: number, public point: Point) {}
 
   /**
    * sort KeyPoint array by closest to toPoint

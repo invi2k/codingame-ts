@@ -1,24 +1,24 @@
 /**
- * Use this stub to create new codingame apps
+ * Use this stub to create new codin game app
  * Be sure to add an entry in the webpack.config.js
  */
-// put any imports here
-
-// the program executor
 export class CodinGameApp {
-  public run() {
+  private static isRunning = true;
+
+  public static stop() {
+    CodinGameApp.isRunning = false;
+  }
+
+  public static run() {
     // read pre-loop inputs
-    // TODO read pre-loop inputs
-    // game loop
-    while (true) {
+    while (true) { // eslint-disable-line
       // read loop inputs
-      // printErr('debug message');
-      // print('game command');
+      // console.error('debug message');
+      // console.log('game command');
     }
   }
 }
 
-// START PROGRAM
-if (typeof isRunAtCodinGame === 'boolean') {
-  new CodinGameApp().run(); // start the program if the code is run at codingame
+if (isRunAtCodinGame) {
+  CodinGameApp.run();
 }

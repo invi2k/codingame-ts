@@ -1,3 +1,13 @@
 {
-  "extends": "./node_modules/gts/"
+  "env": {
+    "node": true,
+    "commonjs": true,
+    "es6": true,
+    "jasmine": true
+  },
+  "extends": "./node_modules/gts/",
+  "globals": {
+    "readline": "readonly",
+    "isRunAtCodinGame": "readonly"
+  }
 }
