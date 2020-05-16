@@ -10,15 +10,12 @@ export class CodinGameApp {
   }
 
   protected initialize() {
-
   }
 
   protected update() {
-
   }
 
   protected loop() {
-
   }
 }
 
